@@ -12,7 +12,7 @@ export default function UserList() {
   container.appendChild(list);
 
   async function fetchUsers() {
-    const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com//users');
+    const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com/users');
     const data = await res.json();
     list.innerHTML = '';
     data.users.forEach(name => {

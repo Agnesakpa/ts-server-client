@@ -18,7 +18,7 @@ export default function Greet() {
     if (!name) return alert('Enter a name!');
 
     try {
-      const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com//users', {
+      const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com/users', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name }),

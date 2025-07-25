@@ -16,7 +16,7 @@ export default function SumForm() {
  const numbers = input.value.split(',').map(n => parseFloat(n.trim()));
 
   try {
-    const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com//sum', {
+    const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com/sum', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ numbers }),
