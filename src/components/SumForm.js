@@ -1,6 +1,5 @@
 export default function SumForm() {
   const container = document.createElement('div');
-  container.style.marginTop = '40px';
   container.className = 'component-container';
 
   const title = document.createElement('h3');
@@ -9,8 +8,6 @@ export default function SumForm() {
 
   const input = document.createElement('input');
   input.placeholder = 'e.g. 1,2,3';
-  input.style.padding = '8px';
-  input.style.marginRight = '10px';
   container.appendChild(input);
 
   const btn = document.createElement('button');

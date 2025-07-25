@@ -1,6 +1,5 @@
 export default function UserList() {
   const container = document.createElement('div');
-  container.style.marginTop = '50px';
   container.className = 'component-container';
 
   const heading = document.createElement('h3');
