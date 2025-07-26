@@ -1,3 +1,5 @@
+import showModal from './Modal.js';
+
 export default function SumForm() {
   const container = document.createElement('div');
   container.className = 'component-container';
@@ -26,9 +28,9 @@ export default function SumForm() {
     console.log('Response data:', data); 
 
     // ✅ Make sure this line matches the backend response shape
-    alert(`Sum = ${data.sum}`);
+    showModal(`Sum = ${data.sum}`);
   } catch (err) {
-    alert('Something went wrong');
+    showModal('Something went wrong');
     console.error(err);
   }
 };

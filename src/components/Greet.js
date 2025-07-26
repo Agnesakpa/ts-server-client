@@ -1,3 +1,5 @@
+import showModal from './Modal.js';
+
 export default function Greet() {
   const container = document.createElement('div');
   container.className = 'component-container';
@@ -15,7 +17,7 @@ export default function Greet() {
 
   btn.onclick = async () => {
     const name = input.value.trim();
-    if (!name) return alert('Enter a name!');
+    if (!name) return showModal('Enter a name!');
 
     try {
       const res = await fetch('https://test-typescript-server-744a62d0e39f.herokuapp.com/users', {
@@ -28,13 +30,13 @@ export default function Greet() {
 
       if (res.ok) {
         heading.innerText = `👋 Welcome, ${name}!`;
-        alert(data.message || 'Saved!');
+        showModal(data.message || 'Saved!');
         input.value = ''; // optional: clear input field
       } else {
-        alert(data.error || 'Something went wrong');
+        showModal(data.error || 'Something went wrong');
       }
     } catch (err) {
-      alert('Failed to reach backend');
+      showModal('Failed to reach backend');
       console.error(err);
     }
   };
